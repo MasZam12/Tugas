@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="adminForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuAdminController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <AnchorPane prefHeight="700.0" prefWidth="230.0" stylesheets="@../Css/menuadmin.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="674.0" prefWidth="257.0" style="-fx-background-color: #fff; -fx-background-radius: 20px;">
+                     <children>
+                        <Button fx:id="homeBt" alignment="TOP_LEFT" layoutX="54.0" layoutY="222.0" mnemonicParsing="false" onAction="#toHome" prefHeight="35.0" prefWidth="150.0" styleClass="but" stylesheets="@../Css/menuadmin.css" text="HOME" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="2em" />
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="dashboardBt" alignment="TOP_LEFT" layoutX="54.0" layoutY="296.0" mnemonicParsing="false" onAction="#switchPage" prefHeight="35.0" prefWidth="150.0" styleClass="but" stylesheets="@../Css/menuadmin.css" text="DASHBOARD" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" size="2em" />
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="userBt" alignment="TOP_LEFT" layoutX="54.0" layoutY="359.0" mnemonicParsing="false" onAction="#switchPage" prefHeight="35.0" prefWidth="150.0" styleClass="but" stylesheets="@../Css/menuadmin.css" text="USER" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="2em" />
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="kontraktorBt" alignment="TOP_LEFT" layoutX="54.0" layoutY="423.0" mnemonicParsing="false" onAction="#switchPage" prefHeight="35.0" prefWidth="150.0" styleClass="but" stylesheets="@../Css/menuadmin.css" text="PROPERTI" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CART_PLUS" size="2em" />
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="exitBt" alignment="TOP_LEFT" layoutX="54.0" layoutY="603.0" mnemonicParsing="false" onAction="#exitWin" prefHeight="35.0" prefWidth="150.0" styleClass="but" stylesheets="@../Css/menuadmin.css" text="LOGOUT" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <FontAwesomeIconView glyphName="USER_CIRCLE" layoutX="81.0" layoutY="132.0" size="8EM" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="dashboardForm" layoutX="125.0" layoutY="186.0" prefHeight="700.0" prefWidth="770.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="161.0" text="DASHBOARD">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="49.0" text="Hi Admin , Welcome In Dashboard">
+                           <font>
+                              <Font name="Comic Sans MS Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="userForm" prefHeight="700.0" prefWidth="1270.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                      <AnchorPane layoutX="36.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="1207.0" style="-fx-background-color: #fff; -fx-background-radius: 20px;" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="10.0">
+                           <children>
+                              <TableView fx:id="tabelUser" layoutX="391.0" layoutY="14.0" prefHeight="655.0" prefWidth="802.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                <columns>
+                                  <TableColumn fx:id="IdUser" prefWidth="75.0" text="ID" />
+                                  <TableColumn fx:id="nameUser" prefWidth="149.0" text="NAME" />
+                                    <TableColumn fx:id="emailUser" prefWidth="133.0" text="EMAIL" />
+                                    <TableColumn fx:id="noUser" prefWidth="147.0" text="NO HP" />
+                                    <TableColumn fx:id="daftarUser" prefWidth="154.0" text="TANGGAL DAFTAR " />
+                                    <TableColumn fx:id="tipePenggunaUser" prefWidth="160.0" text="TIPE PENGGUNA" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="deleteUserBt" layoutX="245.0" layoutY="527.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="40.0" prefWidth="100.0" styleClass="but" stylesheets="@../Css/menuadmin.css" text="DELETE" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="TRASH" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="updateUserBt" layoutX="134.0" layoutY="527.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" styleClass="but" stylesheets="@../Css/menuadmin.css" text="UPDATE" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="PENCIL_SQUARE" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="addUserBt" layoutX="20.0" layoutY="527.0" mnemonicParsing="false" onAction="#toTambah" prefHeight="40.0" prefWidth="100.0" styleClass="but" stylesheets="@../Css/menuadmin.css" text="ADD" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <TextField layoutX="70.0" layoutY="195.0" prefHeight="35.0" prefWidth="250.0" />
+                              <TextField layoutX="70.0" layoutY="262.0" prefHeight="35.0" prefWidth="250.0" />
+                              <TextField layoutX="70.0" layoutY="330.0" prefHeight="35.0" prefWidth="250.0" />
+                              <TextField layoutX="70.0" layoutY="393.0" prefHeight="35.0" prefWidth="250.0" />
+                              <TextField layoutX="70.0" layoutY="458.0" prefHeight="35.0" prefWidth="250.0" />
+                              <Label layoutX="70.0" layoutY="165.0" prefHeight="30.0" prefWidth="200.0" text="Nama">
+                                 <font>
+                                    <Font name="Constantia Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="70.0" layoutY="232.0" prefHeight="30.0" prefWidth="200.0" text="Email">
+                                 <font>
+                                    <Font name="Constantia Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="70.0" layoutY="300.0" prefHeight="30.0" prefWidth="200.0" text="No Handphone">
+                                 <font>
+                                    <Font name="Constantia Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="70.0" layoutY="365.0" prefHeight="30.0" prefWidth="200.0" text="Password">
+                                 <font>
+                                    <Font name="Constantia Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="70.0" layoutY="428.0" prefHeight="30.0" prefWidth="200.0" text="Tipe Pengguna">
+                                 <font>
+                                    <Font name="Constantia Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="kontraktorForm" prefHeight="700.0" prefWidth="1233.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="700.0" prefWidth="1233.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TableView fx:id="tabelProperti" layoutX="450.0" layoutY="10.0" prefHeight="673.0" prefWidth="771.0">
+                                <columns>
+                                  <TableColumn fx:id="idPropertiTable" prefWidth="75.0" text="ID " />
+                                  <TableColumn fx:id="namaPropertiTable" prefWidth="126.0" text="NAMA PROPERTI" />
+                                    <TableColumn fx:id="lokasiPropertiTable" prefWidth="126.0" text="LOKASI" />
+                                    <TableColumn fx:id="hargaPropertiTable" prefWidth="126.0" text="HARGA" />
+                                    <TableColumn fx:id="luasPropertiTable" prefWidth="126.0" text="LUAS " />
+                                    <TableColumn fx:id="ketersediaanPropertiTable" prefWidth="191.0" text="KETERSEDIAAN" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="tambahPropertiBt" layoutX="35.0" layoutY="628.0" mnemonicParsing="false" onAction="#adProp" prefHeight="37.0" prefWidth="104.0" styleClass="but" stylesheets="@../Css/menuadmin.css" text="TAMBAH" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="deletePropertiBt" layoutX="286.0" layoutY="628.0" mnemonicParsing="false" onAction="#deleteProperti" prefHeight="37.0" prefWidth="100.0" styleClass="but" stylesheets="@../Css/menuadmin.css" text="DELETE" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="TRASH" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="updatePropertiBt" layoutX="160.0" layoutY="628.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="98.0" styleClass="but" stylesheets="@../Css/menuadmin.css" text="UPDATE" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="PENCIL" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

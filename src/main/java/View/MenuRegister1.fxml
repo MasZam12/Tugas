@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="MenuRegistrasi" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuRegisterController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="400.0">
+         <children>
+            <AnchorPane fx:id="SignInForm" prefHeight="600.0" prefWidth="400.0" styleClass="gradasiPane" stylesheets="@../Css/menuregister.css">
+               <children>
+                  <Pane layoutX="50.0" layoutY="50.0" prefHeight="500.0" prefWidth="300.0" style="-fx-background-radius: 20px;">
+                     <children>
+                        <TextField fx:id="Username" alignment="CENTER" layoutX="25.0" layoutY="150.0" prefHeight="35.0" prefWidth="250.0" promptText="Username" styleClass="bg" stylesheets="@../Css/menuregister.css">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></TextField>
+                        <TextField fx:id="ShowPassword" alignment="CENTER" layoutX="25.0" layoutY="200.0" prefHeight="35.0" prefWidth="250.0" promptText="Password" styleClass="bg" stylesheets="@../Css/menuregister.css" visible="false">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></TextField>
+                        <PasswordField fx:id="Password" alignment="CENTER" layoutX="25.0" layoutY="200.0" prefHeight="35.0" prefWidth="250.0" promptText="Password" styleClass="bg" stylesheets="@../Css/menuregister.css">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></PasswordField>
+                        <FontAwesomeIconView glyphName="USER" layoutX="120.0" layoutY="86.0" size="7EM" styleClass="gradasiPane" />
+                        <Label layoutX="124.0" layoutY="98.0" text="SIGN IN">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="Checkbox" layoutX="25.0" layoutY="245.0" mnemonicParsing="false" onAction="#loginshowPassword" prefHeight="20.0" prefWidth="150.0" text="Show Password" />
+                        <Button fx:id="LoginBt" layoutX="25.0" layoutY="280.0" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="250.0" style="-fx-background-radius: 20PX;" text="LOGIN">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="but" />
+                              <String fx:value="gradasiPane" />
+                           </styleClass>
+                        </Button>
+                        <Label layoutX="25.0" layoutY="445.0" prefHeight="30.0" prefWidth="150.0" text="Belum Punya Akun?">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink fx:id="toSigninHyperlink" layoutX="190.0" layoutY="445.0" onAction="#switchForm" text="SIGN UP">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                        </Hyperlink>
+                        <ComboBox fx:id="loginAs" layoutX="75.0" layoutY="341.0" prefWidth="150.0" promptText="Login Sebagai" onAction="#pindah"  />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="SignupForm" prefHeight="600.0" prefWidth="400.0" styleClass="gradasiPane" stylesheets="@../Css/menuregister.css" visible="false">
+               <children>
+                  <Pane layoutX="50.0" layoutY="50.0" prefHeight="500.0" prefWidth="300.0" style="-fx-background-radius: 20px;">
+                     <children>
+                        <TextField fx:id="CreateUsername" alignment="CENTER" layoutX="25.0" layoutY="170.0" prefHeight="35.0" prefWidth="250.0" promptText="Username" styleClass="bg" stylesheets="@../Css/menuregister.css">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></TextField>
+                        <TextField fx:id="CreateEmail" alignment="CENTER" layoutX="25.0" layoutY="200.0" prefHeight="35.0" prefWidth="250.0" promptText="Email" styleClass="bg" stylesheets="@../Css/menuregister.css">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></TextField>
+                        <TextField fx:id="CreateNo" alignment="CENTER" layoutX="25.0" layoutY="240.0" prefHeight="35.0" prefWidth="250.0" promptText="No Hp" styleClass="bg" stylesheets="@../Css/menuregister.css">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></TextField>
+                        <TextField fx:id="CreateShowPassword" alignment="CENTER" layoutX="25.0" layoutY="280.0" prefHeight="35.0" prefWidth="250.0" promptText="Password" styleClass="bg" stylesheets="@../Css/menuregister.css" visible="false">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></TextField>
+                        <PasswordField fx:id="CreatePassword" alignment="CENTER" layoutX="25.0" layoutY="280.0" prefHeight="35.0" prefWidth="250.0" promptText="Password" styleClass="bg" stylesheets="@../Css/menuregister.css">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></PasswordField>
+                        <FontAwesomeIconView glyphName="USER" layoutX="120.0" layoutY="86.0" size="7EM" styleClass="gradasiPane" />
+                        <Label layoutX="121.0" layoutY="98.0" text="SIGN UP">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="CreateCheckbox" layoutX="25.0" layoutY="330.0" mnemonicParsing="false" onAction="#createshowPassword" prefHeight="20.0" prefWidth="150.0" text="Show Password" />
+                        <Button fx:id="signUpBt" layoutX="25.0" layoutY="380.0" mnemonicParsing="false" onAction="#create" prefHeight="35.0" prefWidth="250.0" style="-fx-background-radius: 20PX;" text="CREATE">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="but" />
+                              <String fx:value="gradasiPane" />
+                           </styleClass>
+                        </Button>
+                        <Label layoutX="25.0" layoutY="445.0" prefHeight="30.0" prefWidth="150.0" text="Sudah Punya Akun?">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink fx:id="CreateHyperlink" layoutX="190.0" layoutY="445.0" onAction="#switchForm" text="SIGN IN">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                        </Hyperlink>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
